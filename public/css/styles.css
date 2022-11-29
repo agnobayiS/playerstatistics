@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300&display=swap');
+body{
+    /* background-image: url("./22432.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+button {
+    cursor: pointer;
+    
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 40px 0 40px;
+    color: white;
+}
+.first{
+    background-image: url(./22432.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+button{
+    width: 200px;
+    height: 40px;
+    background: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 5em;
+}
+.header{
+    vertical-align: middle;
+    padding: 20px 80px 0px 80px;
+  }
+nav{
+    border-collapse: collapse;
+    background-color: rgb(158, 211, 215);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.09);
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  .nav-link:hover{
+    background-color: rgb(142, 139, 163);
+  }
+  .nav-link {
+    color: black;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px;
+    transition: 0.2s ease-out;
+  }
+
+.backGround{
+    background-color: #D7C49EFF;
+    width: 1000px;
+    margin: 10px auto;
+    padding-top: 20px;
+}
+.secondBackGround{
+    background-color: #D7C49EFF;
+    width: 1000px;
+    margin: 40px auto;
+}
+/* .ThirdBackGround{
+    background-color: #D7C49EFF;
+    width: 1000px;
+    margin: 40px auto;
+} */
+
+.title{
+    text-align: center;
+}
+
+.startBtn{
+    text-align: center;
+}
+.getStartedBtn{
+    height: 50px;
+    width: 150px;
+    background-color:rgb(142, 139, 163) ;
+    color: white;
+}
+.addRout{
+    height: 50px;
+    width: 150px;
+    
+}
+.textBox{
+    
+    height: 30px;
+}
+.name-input{
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+
+}
+
+.add{
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+.radioBtn{
+    display: flex;
+    margin: 1em 0;
+    align-items: center;
+}
+.new{
+    align-items: center;
+}
+@media only screen and (max-width: 400px) {
+
+    body{
+        display: flex;
+        width: 400px;
+    }
+    .backGround{
+        background-color: #D7C49EFF;
+        width: 100%;
+        margin: 10px auto;
+        /* padding-top: 20px; */
+        height: 1200px;
+    }
+    .secondBackGround{
+        background-color: #D7C49EFF;
+        width: 100%;
+        /* margin: 40px auto; */
+        height: 1200px;
+       
+    }
+    nav{
+        max-width: 400px;
+        width: 100%;
+    }
+   
+}
+
+
