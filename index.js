@@ -80,6 +80,12 @@ app.get('/tables', function (req,res){
     })
 })
 
+app.get('/tables', function (req,res){
+    res.render('tables',{
+
+    })
+})
+
 
 app.post("/",function (req,res){
     res.redirect('scan')

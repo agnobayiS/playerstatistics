@@ -61,6 +61,7 @@ nav{
   }
   .nav-link:hover{
     background-color: rgb(142, 139, 163);
+    border-radius:5em ;
   }
   .nav-link {
     color: black;
