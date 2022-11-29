@@ -68,16 +68,22 @@ app.get('/', function (req, res) {
     })
 })
 
-app.get('./first', function (req,res){
-    res.render('first',{
+app.get('/start', function (req,res){
+    res.render('start',{
+
+    })
+})
+
+app.get('/tables', function (req,res){
+    res.render('tables',{
 
     })
 })
 
 
-// app.post("/",function (req,res){
-//     res.redirect('scan')
-// })
+app.post("/",function (req,res){
+    res.redirect('scan')
+})
 
 app.get('/scan', async function (req, res) {
   
