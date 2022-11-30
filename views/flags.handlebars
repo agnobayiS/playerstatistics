@@ -9,14 +9,12 @@
 
             </nav>
         </div> 
-        <br>
-        <H1 class="center" style="text-align:center ;">GUESS WICH PLAYER IS THIS ?</H1>
-        <H2 class="center"  style="text-align:center ;">HINT .....</H2>
+
+        <H1>Scan your player</H1>
 
     </form>
 
-
-<div>Teachable Machine Image Model</div>
+{{!-- <div>Teachable Machine Image Model</div> --}}
 <button type="button" onclick="init()">Start</button>
 <div id="webcam-container"></div>
 <div id="label-container"></div>
@@ -27,7 +25,7 @@
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "https://teachablemachine.withgoogle.com/models/WT52_-qY5/";
+    const URL = "https://teachablemachine.withgoogle.com/models/7QAQV-pcQ/";
 
     let model, webcam, labelContainer, maxPredictions;
 
@@ -71,11 +69,9 @@
         for (let i = 0; i < maxPredictions; i++) {
             const classPrediction =
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-            labelContainer.childNodes[i].innerHTML = classPrediction;
+      //      labelContainer.childNodes[i].innerHTML = classPrediction;
         }
     }
 </script>
-
-
 
 </body>
