@@ -1,5 +1,5 @@
 <body style="background-color:#8FD7C7;">
-    <form action="./scan" method="post" class="scaning">
+    <form action="./flags" method="post" class="scaning">
 
          <div class="header">
             <nav id="nav-bar">
@@ -9,12 +9,24 @@
 
             </nav>
         </div> 
+        <br><br>
+        <H1 class="center" style="text-align:center ;">SCAN THE FLAG OF THIS COUNTRY</H1>
+        <h2 style="text-align:center ;">hint.....</h2>
+         <di id="some_div" style="text-align:center ;"></di>
 
-        <H1>Scan your player</H1>
+        <br><br>
+        <div class="center" id="data" style="text-align:center ; align-content:flex-start; ">
+
+            {{#each data}}
+            <li>{{this.first_hint}} </li>
+            <li>{{this.second_hint}}</li>
+            <li>{{this.third_hint}}</li>
+            {{/each}}
+        </div>
 
     </form>
 
-<div>Teachable Machine Image Model</div>
+{{!-- <div>Teachable Machine Image Model</div> --}}
 <button type="button" onclick="init()">Start</button>
 <div id="webcam-container"></div>
 {{!-- <div id="label-container"></div> --}}

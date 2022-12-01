@@ -73,28 +73,13 @@ app.get('/start', function (req, res) {
     })
 })
 
-app.get('/tables', function (req, res) {
-    res.render('tables', {
+app.get('/flags',async function (req, res) {
+     
+    let next = 6
 
-    })
-})
-
-app.get('/tables', function (req, res) {
-    res.render('tables', {
-
-    })
-})
-
-
-app.post("/", function (req, res) {
-    res.redirect('scan')
-})
-
-app.get('/scan', async function (req, res) {
-    let next = 11;
-
-    let ids = await instance.id();
+    let ids = await instance.flagid();
     console.log(ids[0].id);
+
     setTimeout(() => {
         console.log(++next);
         ++next;
@@ -102,10 +87,49 @@ app.get('/scan', async function (req, res) {
     console.log(ids);
 
 
+    let data = await instance.flagHint(next);
+
+    console.log(data);
+    console.log("---------+");
+    res.render('flags', {
+        data
+    })
+})
+
+// app.get('/tables',async function (req, res) {
+
+   
+
+//     res.render('tables', {
+//         data
+//     })
+// })
+
+
+app.post("/", function (req, res) {
+    res.redirect('scan')
+})
+
+app.get('/scan', async function (req, res) {
+    let next = req.query.question_id;
+
+    // let ids = await instance.id();
 
     let data = await instance.playersHint(next);
 
     res.render('scan', {
+        data
+    })
+
+});
+app.get('/api/scan', async function (req, res) {
+    let next = req.query.question_id;
+
+    // let ids = await instance.id();
+
+    let data = await instance.playersHint(next);
+
+    res.json( {
         data
     })
 
