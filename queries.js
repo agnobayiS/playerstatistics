@@ -1,3 +1,4 @@
+
 module.exports = function player(db) {
 
     async function playersHint(id) {

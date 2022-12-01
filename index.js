@@ -4,6 +4,7 @@ const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser')
 const session = require('express-session');
 const { render } = require('ejs');
+
 const stats = require('./queries');
 const pgp = require('pg-promise')();
 
@@ -63,18 +64,29 @@ app.get('/', async function (req, res) {
 
     res.render("start", {
         ids
-
     })
 })
+
+// app.get('/', function (req, res) {
+
+//     res.render("start", {
+
+//     })
+// })
 
 app.get('/start', function (req, res) {
     res.render('start', {
-
-    })
+    });
 })
+// app.get('/start', function (req,res){
+//     res.render('start',{
+// >>>>>>> 7b692f31fa5e0e9a703ec985039a1be3f5f43f92
 
-app.get('/flags',async function (req, res) {
-     
+//         })
+//     })
+
+app.get('/flags', async function (req, res) {
+
     let next = 6
 
     let ids = await instance.flagid();
@@ -98,7 +110,7 @@ app.get('/flags',async function (req, res) {
 
 // app.get('/tables',async function (req, res) {
 
-   
+
 
 //     res.render('tables', {
 //         data
@@ -106,9 +118,25 @@ app.get('/flags',async function (req, res) {
 // })
 
 
-app.post("/", function (req, res) {
-    res.redirect('scan')
-})
+// app.post("/", function (req, res) {
+// =======
+// app.get('/tables', function (req,res){
+//     res.render('tables',{
+
+//     })
+// })
+
+// app.get('/tables', function (req,res){
+//     res.render('tables',{
+
+//     })
+// })
+
+
+// app.post("/",function (req,res){
+// >>>>>>> 7b692f31fa5e0e9a703ec985039a1be3f5f43f92
+//     res.redirect('scan')
+// })
 
 app.get('/scan', async function (req, res) {
     let next = req.query.question_id;
@@ -129,9 +157,15 @@ app.get('/api/scan', async function (req, res) {
 
     let data = await instance.playersHint(next);
 
-    res.json( {
+    res.json({
         data
     })
+
+
+
+    // res.render('scan', {
+
+    // })
 
 });
 
