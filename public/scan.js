@@ -74,8 +74,8 @@ const Template = document.querySelector('.template');
             axios.get(`/api/scan?question_id=${currentQuestion}`)
         
                 .then(function (result) {
+                    
                     const response = result.data;
-
                     // show the next question
                     
                     console.log(response);
