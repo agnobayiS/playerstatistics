@@ -105,7 +105,7 @@ function countdown() {
         //                location.reload();
         // doSomething();
 
-        if (currentQuestion <= 5) {
+        if (currentQuestion <= 4) {
             currentQuestion++;
         } else {
             console.log("GAME OVER!!!");
@@ -146,7 +146,7 @@ async function predict() {
         // console.log(prediction[i].className === "salah")
         const classPrediction =
             prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-        labelContainer.childNodes[i].innerHTML = classPrediction;
+       // labelContainer.childNodes[i].innerHTML = classPrediction;
     }
 
     if (none.probability > 0.85 && currentQuestion == 1) {
